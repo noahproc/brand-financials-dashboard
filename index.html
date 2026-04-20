@@ -428,14 +428,18 @@
   /* RISK SECTION */
   .risk-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+    gap: 20px;
     margin-bottom: 24px;
+    width: 100%;
+    box-sizing: border-box;
   }
   .risk-card {
     border-radius: 12px;
     padding: 20px;
     border: 1px solid;
+    min-width: 0;
+    box-sizing: border-box;
   }
   .risk-card.high {
     background: rgba(239,68,68,0.06);
@@ -604,7 +608,7 @@
     .charts-row { grid-template-columns: 1fr; }
     .charts-row-3 { grid-template-columns: 1fr; }
     .insights-grid { grid-template-columns: 1fr; }
-    .risk-grid { grid-template-columns: 1fr; }
+    .risk-grid { grid-template-columns: repeat(3, 1fr); }
     .opp-grid { grid-template-columns: 1fr; }
     .main { padding: 24px; }
     .header-inner { padding: 24px; }
@@ -634,7 +638,7 @@
   </div>
 </div>
 
-<div style="background:rgba(107,158,255,0.08);border:1px solid rgba(107,158,255,0.2);border-radius:8px;padding:12px 20px;margin:0 48px 0;max-width:1400px;margin-left:auto;margin-right:auto;font-size:12px;color:#93b09e;">
+<div style="background:rgba(107,158,255,0.08);border:1px solid rgba(107,158,255,0.2);border-radius:8px;padding:12px 20px;margin:16px auto;max-width:700px;font-size:12px;color:#93b09e;">
   <strong style="color:#6b9eff;">Portfolio Analysis Sample.</strong> Brand names, partner counts, and financial figures in this report have been anonymized and scaled for portfolio presentation purposes. All analytical frameworks and methodology are original work.
 </div>
 <div class="main">
@@ -2249,16 +2253,16 @@
     <h2>Risk Assessment</h2>
     <span class="section-desc">Portfolio risk factors for leadership-level awareness</span>
   </div>
-  <div class="risk-grid">
+  <div class="risk-grid" style="display:flex;flex-direction:column;gap:16px;width:100%;max-width:800px;">
 
-    <div class="risk-card high">
+    <div class="risk-card high" style="width:100%;">
       <div class="risk-title">&#9888; High Priority Risks</div>
       <div class="risk-item"><div class="risk-dot"></div><span><strong><strong>Top Marketplace Dependency:</strong> Single-brand concentration at 9.2% GMV with a 3.2% rate that Nexus Market can reduce unilaterally. Any term change has immediate P&amp;L impact.</span></div>
       <div class="risk-item"><div class="risk-dot"></div><span><strong>Rate Compression Trend:</strong> Nexus Market, Harrington &amp; Co, and Bellmore Select are all three top-5 brands in "Decreasing" commission mode as of March 2026, with combined $5.6M GMV at declining rates.</span></div>
       <div class="risk-item"><div class="risk-dot"></div><span><strong>No Commission Risk:</strong> WellPath ($91K GMV) shows zero revenue despite 1,236 transactions. This points to either attribution failure or unpaid commissions requiring investigation.</span></div>
     </div>
 
-    <div class="risk-card medium">
+    <div class="risk-card medium" style="width:100%;">
       <div class="risk-title">&#9888; Medium Priority Risks</div>
       <div class="risk-item"><div class="risk-dot"></div><span><strong>6 Inactive Brands:</strong> $733K historical GMV from top-100 brands now generating zero revenue. Churn at this tier is structurally important to reverse.</span></div>
       <div class="risk-item"><div class="risk-dot"></div><span><strong>Entertainment Vertical:</strong> EventSphere ($354K GMV) and TicketVault ($287K) operate at sub-3% rates and are episodic/event-driven, creating lumpy revenue. Not a durable revenue base.</span></div>
@@ -2266,7 +2270,7 @@
       <div class="risk-item"><div class="risk-dot"></div><span><strong>Bellmore Select Rate Anomaly:</strong> Feb EffCPA spiked to 27.5% (likely a short-term promotional rate) before declining to 15.4% in March. Unsustainable rates signal potential partner friction.</span></div>
     </div>
 
-    <div class="risk-card low">
+    <div class="risk-card low" style="width:100%;">
       <div class="risk-title">&#10003; Well-Managed / Low Risk</div>
       <div class="risk-item"><div class="risk-dot"></div><span><strong>Brand Diversity:</strong> Despite Nexus Market's dominance, 99 other brands collectively drive $21M GMV. The portfolio is not a one-brand story at the portfolio level.</span></div>
       <div class="risk-item"><div class="risk-dot"></div><span><strong>Expanding Momentum:</strong> 53% of top-100 brands showing commission expansion is a strong indicator of partner confidence in the platform's traffic quality and user intent.</span></div>
