@@ -1,4 +1,4 @@
-# Phia Brand Portfolio Intelligence Report
+# Brand Portfolio Intelligence Report
 
 A self-contained, single-file interactive analytics dashboard built to analyze affiliate partner performance across a 12-month fiscal year. Designed as a portfolio piece demonstrating data analysis, visualization, and product thinking in the context of a consumer affiliate platform.
 
